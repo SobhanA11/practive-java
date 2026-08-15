@@ -13,7 +13,7 @@ public class DataBase {
     private String country = "Islamic Republic Of Iran";
     private String city = "Tehran";
     private String favoriteCharacter = "Sonic The Hedgehog";
-    private  String favoriteGame = "Minecraft: java edition";
+    private String favoriteGame = "Minecraft: java edition";
     private String favoriteLanguage = "Java";
     private int age = 14;
 
