@@ -9,7 +9,7 @@ package com.syleera.q.SobhanA11.p.practice;
 class Main {
     public static void main(String[] args) {
         DataBase db = new DataBase();
-        Main.printText(db.getName(), db.getLastName(), db.getNickName(), db.getCountry(), db.getCity(), db.getFavoriteCharacter(), db.getFavoriteGame(), db.getFavoriteLanguage(), db.getAge(), db.getHeaderText(), db.getFooterText());
+        Main.printText(db.getName(), db.getLastName(), db.getNickName(), db.getCountry(), db.getCity(), db.getFavoriteCharacter(), db.getFavoriteGame(), db.getFavoriteLanguage(), db.getAge(), db.getHeaderText(), db.getBetweenText());
     }
 
     public static void printText(String name, String lastName, String nickName, String country, String city, String favoriteCharacter, String favoriteGame, String favoriteLanguage, int age, String headerText, String footerText) {

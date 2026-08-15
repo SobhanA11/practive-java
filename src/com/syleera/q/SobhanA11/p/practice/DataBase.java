@@ -17,8 +17,8 @@ public class DataBase {
     private String favoriteLanguage = "Java";
     private int age = 14;
 
-    private String headerText = "====================" + "\nJAVA PROFILE" + "\n====================";
-    private String footerText = "====================";
+    private String headerText = getBetweenText() + "\nJAVA PROFILE\n" + getBetweenText();
+    private String betweenText = "====================";
 
     public String getName() {
         return name;
@@ -60,7 +60,7 @@ public class DataBase {
         return headerText;
     }
 
-    public String getFooterText() {
-        return footerText;
+    public String getBetweenText() {
+        return betweenText;
     }
 }
