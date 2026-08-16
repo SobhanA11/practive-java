@@ -30,12 +30,14 @@ public class Main {
                         "Multiplication: %s\n" +
                         "Division: %s\n" +
                         "Remainder: %s\n" +
-                        "Average: %S",
+                        "Average: %S\n" +
+                        "Bigger: %s",
                 jame.doJame(firstNumber, secondNumber),
                 tafrig.doTafrig(firstNumber, secondNumber),
                 zarb.doZarb(firstNumber, secondNumber),
                 tagsim.doTagsim(firstNumber, secondNumber),
                 bagiMande.doBagiMande(firstNumber, secondNumber),
-                miangin.doMiangin(firstNumber, secondNumber));
+                miangin.doMiangin(firstNumber, secondNumber),
+                Math.max(firstNumber, secondNumber));
     }
 }
