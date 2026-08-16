@@ -30,7 +30,7 @@ public class Main {
                         "Multiplication: %s\n" +
                         "Division: %s\n" +
                         "Remainder: %s\n" +
-                        "Average: %S\n" +
+                        "Average: %s\n" +
                         "Bigger: %s",
                 jame.doJame(firstNumber, secondNumber),
                 tafrig.doTafrig(firstNumber, secondNumber),
