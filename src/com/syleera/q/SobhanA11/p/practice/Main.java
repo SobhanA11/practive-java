@@ -1,9 +1,6 @@
 package com.syleera.q.SobhanA11.p.practice;
 
-import com.syleera.q.SobhanA11.p.practice.actions.Jame;
-import com.syleera.q.SobhanA11.p.practice.actions.Tafrig;
-import com.syleera.q.SobhanA11.p.practice.actions.Tagsim;
-import com.syleera.q.SobhanA11.p.practice.actions.Zarb;
+import com.syleera.q.SobhanA11.p.practice.actions.*;
 
 /**
  * Created at 8/15/2026
@@ -16,6 +13,7 @@ public class Main {
     Tafrig tafrig = new Tafrig();
     Zarb zarb = new Zarb();
     Tagsim tagsim = new Tagsim();
+    Miangin miangin = new Miangin();
 
     public static void main(String[] ags) {
         Main main = new Main();
@@ -29,10 +27,12 @@ public class Main {
                 "Addition: %s\n" +
                         "Subtraction: %s\n" +
                         "Multiplication: %s\n" +
-                        "Division: %s",
+                        "Division: %s\n" +
+                        "Average: %S",
                 jame.doJame(firstNumber, secondNumber),
                 tafrig.doTafrig(firstNumber, secondNumber),
                 zarb.doZarb(firstNumber, secondNumber),
-                tagsim.doTagsim(firstNumber, secondNumber));
+                tagsim.doTagsim(firstNumber, secondNumber),
+                miangin.doMiangin(firstNumber, secondNumber));
     }
 }
