@@ -5,6 +5,7 @@ package com.syleera.q.SobhanA11.p.practice.actions;
  *
  * @author SobhanA11
  */
+
 public class Miangin {
     Jame jame = new Jame();
     public double doMiangin(int firstNumber, int secondNumber) {

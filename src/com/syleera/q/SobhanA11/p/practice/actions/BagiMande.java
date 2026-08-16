@@ -5,6 +5,7 @@ package com.syleera.q.SobhanA11.p.practice.actions;
  *
  * @author SobhanA11
  */
+
 public class BagiMande {
     public double doBagiMande(int firstNumber, int secondNumber) {
         double bagiMandeResult = (double) firstNumber % secondNumber;
