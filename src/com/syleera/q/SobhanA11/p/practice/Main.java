@@ -13,6 +13,7 @@ public class Main {
     Tafrig tafrig = new Tafrig();
     Zarb zarb = new Zarb();
     Tagsim tagsim = new Tagsim();
+    BagiMande bagiMande = new BagiMande();
     Miangin miangin = new Miangin();
 
     public static void main(String[] ags) {
@@ -28,11 +29,13 @@ public class Main {
                         "Subtraction: %s\n" +
                         "Multiplication: %s\n" +
                         "Division: %s\n" +
+                        "Remainder: %s\n" +
                         "Average: %S",
                 jame.doJame(firstNumber, secondNumber),
                 tafrig.doTafrig(firstNumber, secondNumber),
                 zarb.doZarb(firstNumber, secondNumber),
                 tagsim.doTagsim(firstNumber, secondNumber),
+                bagiMande.doBagiMande(firstNumber, secondNumber),
                 miangin.doMiangin(firstNumber, secondNumber));
     }
 }
