@@ -8,7 +8,7 @@ package com.syleera.q.SobhanA11.p.practice.actions;
 
 public class Zarb {
     public double doZarb(int firstNumber, int secondNumber) {
-        double zarbResult = firstNumber * secondNumber;
+        double zarbResult = (double) firstNumber * secondNumber;
         return zarbResult;
     }
 }

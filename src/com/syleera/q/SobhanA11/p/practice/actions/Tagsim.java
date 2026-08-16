@@ -8,7 +8,7 @@ package com.syleera.q.SobhanA11.p.practice.actions;
 
 public class Tagsim {
     public double doTagsim(int firstNumber, int secondNumber) {
-        double tagsimResult = firstNumber / secondNumber;
+        double tagsimResult = (double) firstNumber / secondNumber;
         return tagsimResult;
     }
 }

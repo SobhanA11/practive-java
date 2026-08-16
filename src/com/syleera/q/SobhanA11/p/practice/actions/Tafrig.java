@@ -8,7 +8,7 @@ package com.syleera.q.SobhanA11.p.practice.actions;
 
 public class Tafrig {
     public double doTafrig(int firstNumber, int secondNumber) {
-        double tafrigResult = firstNumber - secondNumber;
+        double tafrigResult = (double) firstNumber - secondNumber;
         return tafrigResult;
     }
 }

@@ -8,7 +8,7 @@ package com.syleera.q.SobhanA11.p.practice.actions;
 
 public class Jame {
     public double doJame(int firstNumber, int secondNumber) {
-        double jameResult = firstNumber + secondNumber;
+        double jameResult = (double) firstNumber + secondNumber;
         return jameResult;
     }
 }
