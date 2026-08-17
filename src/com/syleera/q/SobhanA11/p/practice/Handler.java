@@ -7,4 +7,10 @@ package com.syleera.q.SobhanA11.p.practice;
  */
 
 public class Handler {
+    public void runApp(DataBase db) {
+        System.out.println(db.getStartHeader());
+        System.out.println(db.getWelcomeText());
+        System.out.println();
+        System.out.println(db.getMenu());
+    }
 }

@@ -7,9 +7,9 @@ package com.syleera.q.SobhanA11.p.practice;
  */
 
 public class Main {
-    Handler handler = new Handler();
-
     public static void main(String[] args) {
-
+        DataBase db = new DataBase();
+        Handler handler = new Handler();
+        handler.runApp(db);
     }
 }

@@ -8,9 +8,9 @@ package com.syleera.q.SobhanA11.p.practice;
 
 public class DataBase {
     private String equal = "====================";
-    private String welcomeHeader = equal + "\n       Java Number Analyzer\n" + equal;
+    private String startHeader = equal + equal + "\n       Java Number Analyzer\n" + equal + equal;
     private String welcomeText = "Hello and welcome to the Java Number Analyzer!";
-    private String menuHeader = equal + "\n       MENU\n" + equal + "\n\n\"-1\": Analyze a set\n\"-3\": help\"-2\": Exit\n\nChoose: ";
+    private String menu = equal + "\n       MENU\n" + equal + "\n\n1: Analyze a set\n3: help\n2: Exit\n\nChoose: ";
     private String numCount = "How many numbers do you want to enter?";
     private String enterNumText = "Enter number %s: ";
     private String resultHeader = equal + "\n       RESULT\n" + equal;
@@ -46,12 +46,12 @@ public class DataBase {
         return numCount;
     }
 
-    public String getWelcomeHeader() {
-        return welcomeHeader;
+    public String getStartHeader() {
+        return startHeader;
     }
 
-    public String getMenuHeader() {
-        return menuHeader;
+    public String getMenu() {
+        return menu;
     }
 
     public String getEnterNumText() {
