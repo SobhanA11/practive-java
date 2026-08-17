@@ -8,13 +8,28 @@ package com.syleera.q.SobhanA11.p.practice.actions;
 public class Analyzer {
     private double sum;
     private int amount;
+    private String positive = "Positive";
+    private String negative = "Negative";
+    private String zero = "zero";
+    private String even = "Even";
+    private String odd = "Odd";
 
-    public void status() {
-
+    public String status(double num) {
+        if (num > 0) {
+            return positive;
+        } else if (num < 0){
+            return negative;
+        } else {
+            return zero;
+        }
     }
 
-    public void type() {
-
+    public String type(double num) {
+        if (num % 2 == 0) {
+            return even;
+        } else {
+            return odd;
+        }
     }
 
     public void divisibleByThree() {

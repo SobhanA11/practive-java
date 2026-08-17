@@ -10,7 +10,8 @@ public class DataBase {
     private String equal = "====================";
     private String startHeader = equal + equal + "\n       Java Number Analyzer\n" + equal + equal;
     private String welcomeText = "Hello and welcome to the Java Number Analyzer!";
-    private String menu = equal + "\n       MENU\n" + equal + "\n\n1: Analyze a set\n3: help\n2: Exit\n\nChoose: ";
+    private String menu = equal + "\n       MENU\n" + equal + "\n\n1: Analyze a set\n3: help\n2: Exit";
+    private String chose = "chose: ";
     private String numCount = "How many numbers do you want to enter?";
     private String enterNumText = "Enter number %s: ";
     private String resultHeader = equal + "\n       RESULT\n" + equal;
@@ -29,6 +30,7 @@ public class DataBase {
     private String oddsText = "Odd numbers: %s";
     private String divisibleByThreesText = divisibleByThreeText;
     private String divisibleByFivesText = divisibleByFiveText;
+    private String numberError = "Please only enter valid numbers!";
 
     public String getTypeText() {
         return typeText;
@@ -52,6 +54,10 @@ public class DataBase {
 
     public String getMenu() {
         return menu;
+    }
+
+    public String getChose() {
+        return chose;
     }
 
     public String getEnterNumText() {
@@ -116,5 +122,9 @@ public class DataBase {
 
     public String getAverageText() {
         return averageText;
+    }
+
+    public String getNumberError() {
+        return numberError;
     }
 }
