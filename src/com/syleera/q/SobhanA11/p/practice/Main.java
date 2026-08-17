@@ -10,6 +10,6 @@ public class Main {
     public static void main(String[] args) {
         DataBase db = new DataBase();
         Handler handler = new Handler();
-        handler.runApp(db);
+        handler.mainHandler(db);
     }
 }

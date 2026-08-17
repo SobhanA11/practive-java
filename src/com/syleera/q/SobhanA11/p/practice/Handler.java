@@ -10,31 +10,57 @@ import java.util.Scanner;
 
 public class Handler {
     Scanner sc = new Scanner(System.in);
-    double tempChoice;
+    private byte tempChoice;
+    private byte choice;
 
-    public void runApp(DataBase db) {
+    public void mainHandler(DataBase db) {
         System.out.println(db.getStartHeader());
         System.out.println(db.getWelcomeText());
         System.out.println();
-        System.out.println(db.getMenu());
-        System.out.println();
-        menuHandler(db);
+        System.out.println(db.getMenuHeader());
+        while (true) {
+            System.out.println(db.getMenuText());
+            System.out.println();
+            choice = menuHandler(db);
+            resetTempChoice();
+            if (choice == 1) {
+
+            } else if (choice == 2) {
+                System.out.println();
+                System.out.println(db.getHelpText());
+                System.out.println(db.getAboutText());
+                System.out.println();
+            } else if (choice == 3) {
+                System.out.println(db.getExitText());
+                break;
+            } else {
+                System.out.println("\nSomething went wrong!");
+            }
+        }
     }
 
-    public double menuHandler(DataBase db) {
+    public byte menuHandler(DataBase db) {
         while (true) {
             System.out.print(db.getChose());
             if (sc.hasNextDouble()) {
-                tempChoice = sc.nextDouble();
+                tempChoice = sc.nextByte();
                 if (tempChoice == 1 || tempChoice == 2 || tempChoice == 3) {
                     return tempChoice;
                 } else {
-                    System.out.println(db.getNumberError());
+                    System.out.println(db.getNumberErrorText());
                 }
             } else {
-                System.out.println(db.getNumberError());
+                System.out.println(db.getNumberErrorText());
                 sc.next();
             }
         }
+    }
+
+    public void resetChoice() {
+        choice = 0;
+    }
+
+    public void resetTempChoice() {
+        tempChoice = 0;
     }
 }

@@ -10,7 +10,8 @@ public class DataBase {
     private String equal = "====================";
     private String startHeader = equal + equal + "\n       Java Number Analyzer\n" + equal + equal;
     private String welcomeText = "Hello and welcome to the Java Number Analyzer!";
-    private String menu = equal + "\n       MENU\n" + equal + "\n\n1: Analyze a set\n3: help\n2: Exit";
+    private String menuHeader = equal + "\n       MENU\n" + equal;
+    private String menuText =  "1: Analyze a set\n2: help\n3: Exit";
     private String chose = "chose: ";
     private String numCount = "How many numbers do you want to enter?";
     private String enterNumText = "Enter number %s: ";
@@ -30,7 +31,10 @@ public class DataBase {
     private String oddsText = "Odd numbers: %s";
     private String divisibleByThreesText = divisibleByThreeText;
     private String divisibleByFivesText = divisibleByFiveText;
-    private String numberError = "Please only enter valid numbers!";
+    private String numberErrorText = "Please only enter valid numbers!";
+    private String helpText = "This app is created for analyzing numbers";
+    private String aboutText = "Created with ❤\uFE0F by SobhanA11";
+    private String exitText = "See you soon!";
 
     public String getTypeText() {
         return typeText;
@@ -52,8 +56,12 @@ public class DataBase {
         return startHeader;
     }
 
-    public String getMenu() {
-        return menu;
+    public String getMenuHeader() {
+        return menuHeader;
+    }
+
+    public String getMenuText() {
+        return menuText;
     }
 
     public String getChose() {
@@ -124,7 +132,19 @@ public class DataBase {
         return averageText;
     }
 
-    public String getNumberError() {
-        return numberError;
+    public String getNumberErrorText() {
+        return numberErrorText;
+    }
+
+    public String getHelpText() {
+        return helpText;
+    }
+
+    public String getAboutText() {
+        return aboutText;
+    }
+
+    public String getExitText() {
+        return exitText;
     }
 }
