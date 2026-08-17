@@ -10,7 +10,6 @@ import java.util.Scanner;
 
 public class Handler {
     Scanner sc = new Scanner(System.in);
-    private byte tempChoice;
     private byte choice;
 
     public void mainHandler(DataBase db) {
@@ -22,9 +21,8 @@ public class Handler {
             System.out.println(db.getMenuText());
             System.out.println();
             choice = menuHandler(db);
-            resetTempChoice();
             if (choice == 1) {
-
+                analyzeHandler();
             } else if (choice == 2) {
                 System.out.println();
                 System.out.println(db.getHelpText());
@@ -40,6 +38,7 @@ public class Handler {
     }
 
     public byte menuHandler(DataBase db) {
+        byte tempChoice;
         while (true) {
             System.out.print(db.getChose());
             if (sc.hasNextDouble()) {
@@ -56,11 +55,11 @@ public class Handler {
         }
     }
 
-    public void resetChoice() {
-        choice = 0;
+    public void analyzeHandler() {
+
     }
 
-    public void resetTempChoice() {
-        tempChoice = 0;
+    public void resetChoice() {
+        choice = 0;
     }
 }
