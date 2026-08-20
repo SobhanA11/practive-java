@@ -1,4 +1,4 @@
-package com.syleera.q.SobhanA11.p.practice.actions;
+package com.syleera.q.SobhanA11.p.practice;
 
 import java.util.ArrayList;
 
@@ -19,7 +19,7 @@ public class Analyzer {
     private boolean trueV = true;
     private boolean falseV = false;
 
-    public String status(double num) {
+    public String checkSign(double num) {
         if (num > 0) {
             return positive;
         } else if (num < 0) {
@@ -29,7 +29,7 @@ public class Analyzer {
         }
     }
 
-    public String type(double num) {
+    public String checkParity(double num) {
         if (num % 2 == 0) {
             return even;
         } else {
@@ -37,7 +37,7 @@ public class Analyzer {
         }
     }
 
-    public boolean divisibleByThree(double num) {
+    public boolean isDivisibleByThree(double num) {
         if (num % 3 == 0) {
             return true;
         } else {
@@ -45,7 +45,7 @@ public class Analyzer {
         }
     }
 
-    public boolean divisibleByFIve(double num) {
+    public boolean isDivisibleByFIve(double num) {
         if (num % 5 == 0) {
             return true;
         } else {
@@ -53,7 +53,7 @@ public class Analyzer {
         }
     }
 
-    public double doSum(ArrayList<Double> nums) {
+    public double calculateSum(ArrayList<Double> nums) {
         for (double num : nums) {
             sum += num;
         }
@@ -65,12 +65,12 @@ public class Analyzer {
     }
 
 
-    public double DoAverage(ArrayList<Double> nums) {
-        average = (doSum(nums) / nums.size());
+    public double calculateAverage(ArrayList<Double> nums) {
+        average = (calculateSum(nums) / nums.size());
         return average;
     }
 
-    public double DoAverage(ArrayList<Double> nums, double sum) {
+    public double calculateAverage(ArrayList<Double> nums, double sum) {
         average = (sum / nums.size());
         return average;
     }

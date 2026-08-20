@@ -15,7 +15,7 @@ public class Handler {
     private int numCount;
     private ArrayList<Double> nums = new ArrayList<>();
 
-    public void mainHandler(DataBase db) {
+    public void start(DataBase db) {
         System.out.println(db.getStartHeader());
         System.out.println(db.getWelcomeText());
         System.out.println();
@@ -23,9 +23,10 @@ public class Handler {
         while (true) {
             System.out.println(db.getMenuText());
             System.out.println();
-            choice = menuHandler(db);
+            choice = handleMenu(db);
             if (choice == 1) {
-                analyzeHandler(db);
+                handleNums(db);
+                handleAnalyze();
             } else if (choice == 2) {
                 System.out.println();
                 System.out.println(db.getHelpText());
@@ -41,7 +42,7 @@ public class Handler {
         }
     }
 
-    public byte menuHandler(DataBase db) {
+    public byte handleMenu(DataBase db) {
         byte tempChoice;
         while (true) {
             System.out.print(db.getChose());
@@ -59,7 +60,7 @@ public class Handler {
         }
     }
 
-    public int numberCountHandler(DataBase db) {
+    public int handleNumberCount(DataBase db) {
         int tempNumCount;
         while (true) {
             System.out.print(db.getNumCount());
@@ -77,8 +78,8 @@ public class Handler {
         }
     }
 
-    public void analyzeHandler(DataBase db) {
-        numCount = numberCountHandler(db);
+    public void handleNums(DataBase db) {
+        numCount = handleNumberCount(db);
         if (numCount >= 1 && numCount <= 1000000) {
             for (int i = 0; i < numCount; i++){
                 System.out.printf( db.getEnterNumText(), (i + 1));
@@ -89,6 +90,19 @@ public class Handler {
         }
     }
 
+    public void handleAnalyze() {
+
+        resetAll();
+    }
+
+    public void handleAnalyzePerNumber() {
+
+    }
+
+    public void handleAnalyzeAllNumbers() {
+
+    }
+
     public void resetChoice() {
         choice = 0;
     }
@@ -97,13 +111,13 @@ public class Handler {
         numCount = 0;
     }
 
-    public void resetNumList() {
+    public void resetNums() {
         nums.clear();
     }
 
     public void resetAll() {
         resetChoice();
         resetNumCount();
-        resetNumList();
+        resetNums();
     }
 }
