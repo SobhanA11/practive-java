@@ -29,8 +29,6 @@ public class DataBase {
     private String zerosText = "Zero numbers: %s";
     private String evensText = "Even numbers: %s";
     private String oddsText = "Odd numbers: %s";
-    private String divisibleByThreesText = divisibleByThreeText;
-    private String divisibleByFivesText = divisibleByFiveText;
     private String numberErrorText = "Please only enter valid numbers!";
     private String numberError2Text = "Please enter between 1 or 2 or 3!";
     private String numberError3Text = "Please enter lower than 1,000,000 numbers!";
@@ -111,16 +109,8 @@ public class DataBase {
         return negativesText;
     }
 
-    public String getDivisibleByFivesText() {
-        return divisibleByFivesText;
-    }
-
     public String getOddsText() {
         return oddsText;
-    }
-
-    public String getDivisibleByThreesText() {
-        return divisibleByThreesText;
     }
 
     public String getEvensText() {

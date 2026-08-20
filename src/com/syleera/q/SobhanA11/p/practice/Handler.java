@@ -1,5 +1,6 @@
 package com.syleera.q.SobhanA11.p.practice;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 /**
@@ -9,9 +10,10 @@ import java.util.Scanner;
  */
 
 public class Handler {
-    Scanner sc = new Scanner(System.in);
+    private Scanner sc = new Scanner(System.in);
     private byte choice;
     private int numCount;
+    private ArrayList<Double> nums = new ArrayList<>();
 
     public void mainHandler(DataBase db) {
         System.out.println(db.getStartHeader());
@@ -31,6 +33,7 @@ public class Handler {
                 System.out.println();
             } else if (choice == 3) {
                 System.out.println(db.getExitText());
+                sc.close();
                 break;
             } else {
                 System.out.println(db.getSmwrng());
@@ -77,9 +80,9 @@ public class Handler {
     public void analyzeHandler(DataBase db) {
         numCount = numberCountHandler(db);
         if (numCount >= 1 && numCount <= 1000000) {
-            for (int i = 1; i <= numCount; i++){
-                System.out.printf( db.getEnterNumText(), i);
-                double num = sc.nextDouble();
+            for (int i = 0; i < numCount; i++){
+                System.out.printf( db.getEnterNumText(), (i + 1));
+                nums.add(i, sc.nextDouble());
             }
         } else {
             System.out.println(db.getSmwrng());
@@ -94,8 +97,13 @@ public class Handler {
         numCount = 0;
     }
 
+    public void resetNumList() {
+        nums.clear();
+    }
+
     public void resetAll() {
         resetChoice();
         resetNumCount();
+        resetNumList();
     }
 }
