@@ -11,9 +11,9 @@ public class DataBase {
     private String startHeader = equal + equal + "\n       Java Number Analyzer\n" + equal + equal;
     private String welcomeText = "Hello and welcome to the Java Number Analyzer!";
     private String menuHeader = equal + "\n       MENU\n" + equal;
-    private String menuText =  "1: Analyze a set\n2: help\n3: Exit";
+    private String menuText = "1: Analyze a set\n2: help\n3: Exit";
     private String chose = "chose: ";
-    private String numCount = "How many numbers do you want to enter?";
+    private String numCount = "How many numbers do you want to enter? ";
     private String enterNumText = "Enter number %s: ";
     private String resultHeader = equal + "\n       RESULT\n" + equal;
     private String numberText = "Number %s: %s";
@@ -32,6 +32,8 @@ public class DataBase {
     private String divisibleByThreesText = divisibleByThreeText;
     private String divisibleByFivesText = divisibleByFiveText;
     private String numberErrorText = "Please only enter valid numbers!";
+    private String numberError2Text = "Please enter between 1 or 2 or 3!";
+    private String numberError3Text = "Please enter lower than 1,000,000 numbers!";
     private String helpText = "This app is created for analyzing numbers";
     private String aboutText = "Created with ❤\uFE0F by SobhanA11";
     private String exitText = "See you soon!";
@@ -134,6 +136,14 @@ public class DataBase {
 
     public String getNumberErrorText() {
         return numberErrorText;
+    }
+
+    public String getNumberError2Text() {
+        return numberError2Text;
+    }
+
+    public String getNumberError3Text() {
+        return numberError3Text;
     }
 
     public String getHelpText() {

@@ -11,6 +11,7 @@ import java.util.Scanner;
 public class Handler {
     Scanner sc = new Scanner(System.in);
     private byte choice;
+    private int numCount;
 
     public void mainHandler(DataBase db) {
         System.out.println(db.getStartHeader());
@@ -22,7 +23,7 @@ public class Handler {
             System.out.println();
             choice = menuHandler(db);
             if (choice == 1) {
-                analyzeHandler();
+                analyzeHandler(db);
             } else if (choice == 2) {
                 System.out.println();
                 System.out.println(db.getHelpText());
@@ -41,12 +42,12 @@ public class Handler {
         byte tempChoice;
         while (true) {
             System.out.print(db.getChose());
-            if (sc.hasNextDouble()) {
+            if (sc.hasNextByte()) {
                 tempChoice = sc.nextByte();
                 if (tempChoice == 1 || tempChoice == 2 || tempChoice == 3) {
                     return tempChoice;
                 } else {
-                    System.out.println(db.getNumberErrorText());
+                    System.out.println(db.getNumberError2Text());
                 }
             } else {
                 System.out.println(db.getNumberErrorText());
@@ -55,11 +56,44 @@ public class Handler {
         }
     }
 
-    public void analyzeHandler() {
+    public int numberCountHandler(DataBase db) {
+        int tempNumCount;
+        while (true) {
+            System.out.print(db.getNumCount());
+            if (sc.hasNextInt()) {
+                tempNumCount = sc.nextByte();
+                if (tempNumCount >= 1 && tempNumCount <= 1000000) {
+                    return tempNumCount;
+                } else {
+                    System.out.println(db.getNumberError3Text());
+                }
+            } else {
+                System.out.println(db.getNumberErrorText());
+                sc.next();
+            }
+        }
+    }
 
+    public void analyzeHandler(DataBase db) {
+        numCount = numberCountHandler(db);
+        if (numCount >= 1 && numCount <= 1000000) {
+            for (int i = 1; i <= numCount; i++){
+                System.out.printf( db.getEnterNumText(), i);
+                double num = sc.nextDouble();
+            }
+        }
     }
 
     public void resetChoice() {
         choice = 0;
+    }
+
+    public void resetNumCount() {
+        numCount = 0;
+    }
+
+    public void resetAll() {
+        resetChoice();
+        resetNumCount();
     }
 }

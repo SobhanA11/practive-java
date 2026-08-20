@@ -57,7 +57,8 @@ public class Analyzer {
     }
 
     public void resetAll() {
-
+        resetAmount();
+        resetSum();
     }
 
     public void getAverageBySum() {
