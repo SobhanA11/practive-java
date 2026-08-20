@@ -33,7 +33,7 @@ public class Handler {
                 System.out.println(db.getExitText());
                 break;
             } else {
-                System.out.println("\nSomething went wrong!");
+                System.out.println(db.getSmwrng());
             }
         }
     }
@@ -81,6 +81,8 @@ public class Handler {
                 System.out.printf( db.getEnterNumText(), i);
                 double num = sc.nextDouble();
             }
+        } else {
+            System.out.println(db.getSmwrng());
         }
     }
 

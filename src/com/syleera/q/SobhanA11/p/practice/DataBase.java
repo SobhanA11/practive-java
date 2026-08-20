@@ -37,6 +37,7 @@ public class DataBase {
     private String helpText = "This app is created for analyzing numbers";
     private String aboutText = "Created with ❤\uFE0F by SobhanA11";
     private String exitText = "See you soon!";
+    private String smwrng = "Something went wrong!";
 
     public String getTypeText() {
         return typeText;
@@ -156,5 +157,9 @@ public class DataBase {
 
     public String getExitText() {
         return exitText;
+    }
+
+    public String getSmwrng() {
+        return smwrng;
     }
 }
