@@ -8,5 +8,6 @@ This project is protected by the terms layout in the [LICENSE file](LICENSE) fou
 
 **Special Permission:** However, if you genuinely need this project and the license terms are a barrier for you, feel free to use it anyway. You are hereby granted full permission to use it without worrying about the license restrictions. :)
 
+GitHub repo: https://github.com/SobhanA11/practive-java
 
-
+This release on github: https://github.com/SobhanA11/practive-java/releases/tag/1.4.1

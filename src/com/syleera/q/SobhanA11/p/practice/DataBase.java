@@ -33,7 +33,7 @@ public class DataBase {
     private String numberError3Text = "Please enter lower than 1,000,000 numbers!";
     private String helpText = "This app is created for analyzing numbers";
     private String githubText = "GitHub repo: https://github.com/SobhanA11/practive-java";
-    private String githubReleaseText = "This release on github: https://github.com/SobhanA11/practive-java/releases/tag/1.4";
+    private String githubReleaseText = "This release on github: https://github.com/SobhanA11/practive-java/releases/tag/1.4.1";
     private String licenseText = "© 2026 SobhanA11 — Apache License 2.0";
     private String butLicenseText = "Note: If you really need this project, feel free to use it without worrying about the license terms. You have my permission! :)";
     private String aboutText = "Created with ❤\uFE0F by SobhanA11";
