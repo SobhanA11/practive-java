@@ -19,9 +19,8 @@ public class DataBase {
     private String numberText = "Number %s: %s";
     private String statusText = "Status: %s";
     private String typeText = "Type: %s";
-    private String status = "Status: %s";
     private String divisibleByThreeText = "Divisible by 3: %s";
-    private String divisibleByFiveText = "Divisible bt 5: %s";
+    private String divisibleByFiveText = "Divisible by 5: %s";
     private String sumText = "Sum: %s";
     private String averageText = "Average: %s";
     private String positivesText = "Positive numbers: %s";
@@ -33,6 +32,10 @@ public class DataBase {
     private String numberError2Text = "Please enter between 1 or 2 or 3!";
     private String numberError3Text = "Please enter lower than 1,000,000 numbers!";
     private String helpText = "This app is created for analyzing numbers";
+    private String githubText = "GitHub repo: https://github.com/SobhanA11/practive-java";
+    private String githubReleaseText = "This release on github: https://github.com/SobhanA11/practive-java/releases/tag/1.4";
+    private String licenseText = "© 2026 SobhanA11 — Apache License 2.0";
+    private String butLicenseText = "Note: If you really need this project, feel free to use it without worrying about the license terms. You have my permission! :)";
     private String aboutText = "Created with ❤\uFE0F by SobhanA11";
     private String exitText = "See you soon!";
     private String smwrng = "Something went wrong!";
@@ -85,10 +88,6 @@ public class DataBase {
         return statusText;
     }
 
-    public String getStatus() {
-        return status;
-    }
-
     public String getDivisibleByThreeText() {
         return divisibleByThreeText;
     }
@@ -139,6 +138,22 @@ public class DataBase {
 
     public String getHelpText() {
         return helpText;
+    }
+
+    public String getGithubText() {
+        return githubText;
+    }
+
+    public String getGithubReleaseText() {
+        return githubReleaseText;
+    }
+
+    public String getLicenseText() {
+        return licenseText;
+    }
+
+    public String getButLicenseText() {
+        return butLicenseText;
     }
 
     public String getAboutText() {

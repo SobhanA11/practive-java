@@ -10,7 +10,6 @@ import java.util.ArrayList;
 public class Analyzer {
     private double sum;
     private double average;
-    private String error = "Error";
     private String positive = "Positive";
     private String negative = "Negative";
     private String zero = "zero";
@@ -19,7 +18,7 @@ public class Analyzer {
     private boolean trueV = true;
     private boolean falseV = false;
 
-    public String checkSign(double num) {
+    public String analyzeSign(double num) {
         if (num > 0) {
             return positive;
         } else if (num < 0) {
@@ -29,7 +28,7 @@ public class Analyzer {
         }
     }
 
-    public String checkParity(double num) {
+    public String analyzeParity(double num) {
         if (num % 2 == 0) {
             return even;
         } else {
@@ -37,7 +36,7 @@ public class Analyzer {
         }
     }
 
-    public boolean isDivisibleByThree(double num) {
+    public boolean analyzeIsDivisibleByThree(double num) {
         if (num % 3 == 0) {
             return true;
         } else {
@@ -45,7 +44,7 @@ public class Analyzer {
         }
     }
 
-    public boolean isDivisibleByFIve(double num) {
+    public boolean analyzeIsDivisibleByFIve(double num) {
         if (num % 5 == 0) {
             return true;
         } else {
@@ -53,7 +52,7 @@ public class Analyzer {
         }
     }
 
-    public double calculateSum(ArrayList<Double> nums) {
+    public double analyzeSum(ArrayList<Double> nums) {
         for (double num : nums) {
             sum += num;
         }
@@ -65,13 +64,8 @@ public class Analyzer {
     }
 
 
-    public double calculateAverage(ArrayList<Double> nums) {
-        average = (calculateSum(nums) / nums.size());
-        return average;
-    }
-
-    public double calculateAverage(ArrayList<Double> nums, double sum) {
-        average = (sum / nums.size());
+    public double analyzeAverage(ArrayList<Double> nums) {
+        average = (analyzeSum(nums) / nums.size());
         return average;
     }
 
