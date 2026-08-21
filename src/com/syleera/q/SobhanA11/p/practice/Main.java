@@ -6,3 +6,11 @@ package com.syleera.q.SobhanA11.p.practice;
  * @author SobhanA11
  */
 
+public class Main {
+    public static void main(String[] args) {
+        DataBase db = new DataBase();
+        Analyzer alz = new Analyzer();
+        Handler handler = new Handler();
+        handler.start(db, alz);
+    }
+}
