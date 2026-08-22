@@ -8,22 +8,19 @@ import java.util.ArrayList;
  * @author SobhanA11
  */
 public class Analyzer {
-    private double sum;
-    private double average;
+
     private String positive = "Positive";
     private String negative = "Negative";
-    private String zero = "zero";
+    private String zero = "Zero";
     private String even = "Even";
     private String odd = "Odd";
-    private boolean trueV = true;
-    private boolean falseV = false;
 
     public String analyzeSign(double num) {
         if (num > 0) {
             return positive;
         } else if (num < 0) {
             return negative;
-        } else{
+        } else {
             return zero;
         }
     }
@@ -37,45 +34,26 @@ public class Analyzer {
     }
 
     public boolean analyzeIsDivisibleByThree(double num) {
-        if (num % 3 == 0) {
-            return true;
-        } else {
-            return false;
-        }
+        return (num % 3 == 0);
     }
 
-    public boolean analyzeIsDivisibleByFIve(double num) {
-        if (num % 5 == 0) {
-            return true;
-        } else {
-            return false;
-        }
+    public boolean analyzeIsDivisibleByFive(double num) {
+        return (num % 5 == 0);
     }
 
     public double analyzeSum(ArrayList<Double> nums) {
+        double sum = 0;
         for (double num : nums) {
             sum += num;
         }
         return sum;
     }
 
-    public void resetSum() {
-        sum = 0;
-    }
-
-
     public double analyzeAverage(ArrayList<Double> nums) {
+        double average;
+
         average = (analyzeSum(nums) / nums.size());
         return average;
-    }
-
-    public void resetAverage() {
-        average = 0;
-    }
-
-    public void resetAll() {
-        resetSum();
-        resetAverage();
     }
 
 }

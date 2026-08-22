@@ -16,12 +16,12 @@ public class Handler {
     private ArrayList<Double> nums = new ArrayList<>();
 
     public void start(DataBase db, Analyzer alz) {
-        System.out.println(db.getStartHeader());
-        System.out.println(db.getWelcomeText());
+        System.out.println(db.getSTART_HEADER());
+        System.out.println(db.getWELCOME_TEXT());
         System.out.println();
         while (true) {
-            System.out.println(db.getMenuHeader());
-            System.out.println(db.getMenuText());
+            System.out.println(db.getMENU_HEADER());
+            System.out.println(db.getMENU_TEXT());
             System.out.println();
             choice = handleMenu(db);
             if (choice == 1) {
@@ -29,19 +29,18 @@ public class Handler {
                 handleAnalyze(db, alz);
             } else if (choice == 2) {
                 System.out.println();
-                System.out.println(db.getHelpText());
-                System.out.println(db.getGithubText());
-                System.out.println(db.getGithubReleaseText());
-                System.out.println(db.getAboutText());
-                System.out.println(db.getLicenseText());
-                System.out.println(db.getButLicenseText());
+                System.out.println(db.getHELP_TEXT());
+                System.out.println(db.getGITHUB_TEXT());
+                System.out.println(db.getABOUT_TEXT());
+                System.out.println(db.getLICENSE_TEXT());
+                System.out.println(db.getBUT_LICENSE_TEXT());
                 System.out.println();
             } else if (choice == 3) {
-                System.out.println(db.getExitText());
+                System.out.println(db.getEXIT_TEXT());
                 sc.close();
                 break;
             } else {
-                System.out.println(db.getSmwrng());
+                System.out.println(db.getSMWRNG());
             }
         }
     }
@@ -49,16 +48,16 @@ public class Handler {
     public byte handleMenu(DataBase db) {
         byte tempChoice;
         while (true) {
-            System.out.print(db.getChose());
+            System.out.print(db.getCHOSE());
             if (sc.hasNextByte()) {
                 tempChoice = sc.nextByte();
                 if (tempChoice == 1 || tempChoice == 2 || tempChoice == 3) {
                     return tempChoice;
                 } else {
-                    System.out.println(db.getNumberError2Text());
+                    System.out.println(db.getNUMBER_ERROR_2_TEXT());
                 }
             } else {
-                System.out.println(db.getNumberErrorText());
+                System.out.println(db.getNUMBER_ERROR_TEXT());
                 sc.next();
             }
         }
@@ -67,16 +66,16 @@ public class Handler {
     public int handleNumberCount(DataBase db) {
         int tempNumCount;
         while (true) {
-            System.out.print(db.getNumCount());
+            System.out.print(db.getNUM_COUNT());
             if (sc.hasNextInt()) {
                 tempNumCount = sc.nextInt();
                 if (tempNumCount >= 1 && tempNumCount <= 1000000) {
                     return tempNumCount;
                 } else {
-                    System.out.println(db.getNumberError3Text());
+                    System.out.println(db.getNUMBER_ERROR_3_TEXT());
                 }
             } else {
-                System.out.println(db.getNumberErrorText());
+                System.out.println(db.getNUMBER_ERROR_TEXT());
                 sc.next();
             }
         }
@@ -84,24 +83,20 @@ public class Handler {
 
     public void handleNums(DataBase db) {
         numCount = handleNumberCount(db);
-        if (numCount >= 1 && numCount <= 1000000) {
-            for (int i = 0; i < numCount; i++){
-                nums.add(i, handleSingleNumber(db, i));
-            }
-        } else {
-            System.out.println(db.getSmwrng());
+        for (int i = 0; i < numCount; i++) {
+            nums.add(i, handleSingleNumber(db, i));
         }
     }
 
-    public double handleSingleNumber (DataBase db, int i) {
+    public double handleSingleNumber(DataBase db, int i) {
         double tempNum;
         while (true) {
-            System.out.printf( db.getEnterNumText(), (i + 1));
+            System.out.printf(db.getENTER_NUM_TEXT(), (i + 1));
             if (sc.hasNextDouble()) {
                 tempNum = sc.nextDouble();
                 return tempNum;
             } else {
-                System.out.println(db.getNumberErrorText());
+                System.out.println(db.getNUMBER_ERROR_TEXT());
                 sc.next();
             }
         }
@@ -109,7 +104,7 @@ public class Handler {
 
     public void handleAnalyze(DataBase db, Analyzer alz) {
         System.out.println();
-        System.out.println(db.getResultHeader());
+        System.out.println(db.getRESULT_HEADER());
         for (int i = 0; i < nums.size(); i++) {
             handleAnalyzePerNumber(db, alz, nums.get(i), i);
             System.out.println();
@@ -118,19 +113,18 @@ public class Handler {
         handleAnalyzeAllNumbers(db, alz);
         System.out.println();
         resetAll();
-        alz.resetAll();
     }
 
     public void handleAnalyzePerNumber(DataBase db, Analyzer alz, double num, int i) {
-        System.out.printf(db.getNumberText(), (i + 1) , num);
+        System.out.printf(db.getNUMBER_TEXT(), (i + 1), num);
         System.out.println();
-        System.out.printf(db.getStatusText(), alz.analyzeSign(num));
+        System.out.printf(db.getSTATUS_TEXT(), alz.analyzeSign(num));
         System.out.println();
-        System.out.printf(db.getTypeText(), alz.analyzeParity(num));
+        System.out.printf(db.getTYPE_TEXT(), alz.analyzeParity(num));
         System.out.println();
-        System.out.printf(db.getDivisibleByThreeText(), alz.analyzeIsDivisibleByThree(num));
+        System.out.printf(db.getDIVISIBLE_BY_THREE_TEXT(), alz.analyzeIsDivisibleByThree(num));
         System.out.println();
-        System.out.printf(db.getDivisibleByFiveText(), alz.analyzeIsDivisibleByFIve(num));
+        System.out.printf(db.getDIVISIBLE_BY_FIVE_TEXT(), alz.analyzeIsDivisibleByFive(num));
         System.out.println();
     }
 
@@ -150,22 +144,22 @@ public class Handler {
         ArrayList<Double> divisibleByFives = new ArrayList<>();
         String divisibleByFivesText = "";
 
-        System.out.printf(db.getSumText(), alz.analyzeSum(nums));
+        System.out.printf(db.getSUM_TEXT(), alz.analyzeSum(nums));
         System.out.println();
 
-        System.out.printf(db.getAverageText(), alz.analyzeAverage(nums));
+        System.out.printf(db.getAVERAGE_TEXT(), alz.analyzeAverage(nums));
         System.out.println();
 
         for (int i = 0; i < nums.size(); i++) {
-            if ( (alz.analyzeSign(nums.get(i))).equals("Positive") ) {
+            if ((alz.analyzeSign(nums.get(i))).equals("Positive")) {
                 positives.add(nums.get(i));
-            } else if ( (alz.analyzeSign(nums.get(i))) .equals("Negative") ) {
+            } else if ((alz.analyzeSign(nums.get(i))).equals("Negative")) {
                 negatives.add(nums.get(i));
             } else {
                 zeros.add(nums.get(i));
             }
 
-            if ( (alz.analyzeParity(nums.get(i))).equals("Even") ) {
+            if ((alz.analyzeParity(nums.get(i))).equals("Even")) {
                 evens.add(nums.get(i));
             } else {
                 odds.add(nums.get(i));
@@ -175,7 +169,7 @@ public class Handler {
                 divisibleByThrees.add(nums.get(i));
             }
 
-            if (alz.analyzeIsDivisibleByFIve(nums.get(i))) {
+            if (alz.analyzeIsDivisibleByFive(nums.get(i))) {
                 divisibleByFives.add(nums.get(i));
             }
         }
@@ -186,7 +180,7 @@ public class Handler {
                 positivesText += ", ";
             }
         }
-        System.out.printf(db.getPositivesText(), positivesText);
+        System.out.printf(db.getPOSITIVES_TEXT(), positivesText);
         System.out.println();
 
         for (int i = 0; i < negatives.size(); i++) {
@@ -195,7 +189,7 @@ public class Handler {
                 negativesText += ", ";
             }
         }
-        System.out.printf(db.getNegativesText(), negativesText);
+        System.out.printf(db.getNEGATIVES_TEXT(), negativesText);
         System.out.println();
 
         for (int i = 0; i < zeros.size(); i++) {
@@ -204,7 +198,7 @@ public class Handler {
                 zerosText += ", ";
             }
         }
-        System.out.printf(db.getZerosText(), zerosText);
+        System.out.printf(db.getZEROS_TEXT(), zerosText);
         System.out.println();
 
         for (int i = 0; i < evens.size(); i++) {
@@ -213,7 +207,7 @@ public class Handler {
                 evensText += ", ";
             }
         }
-        System.out.printf(db.getEvensText(), evensText);
+        System.out.printf(db.getEVENS_TEXT(), evensText);
         System.out.println();
 
         for (int i = 0; i < odds.size(); i++) {
@@ -222,7 +216,7 @@ public class Handler {
                 oddsText += ", ";
             }
         }
-        System.out.printf(db.getOddsText(), oddsText);
+        System.out.printf(db.getODDS_TEXT(), oddsText);
         System.out.println();
 
         for (int i = 0; i < divisibleByThrees.size(); i++) {
@@ -231,7 +225,7 @@ public class Handler {
                 divisibleByThreesText += ", ";
             }
         }
-        System.out.printf(db.getDivisibleByThreeText(), divisibleByThreesText);
+        System.out.printf(db.getDIVISIBLE_BY_THREE_TEXT(), divisibleByThreesText);
         System.out.println();
 
         for (int i = 0; i < divisibleByFives.size(); i++) {
@@ -240,7 +234,7 @@ public class Handler {
                 divisibleByFivesText += ", ";
             }
         }
-        System.out.printf(db.getDivisibleByFiveText(), divisibleByFivesText);
+        System.out.printf(db.getDIVISIBLE_BY_FIVE_TEXT(), divisibleByFivesText);
         System.out.println();
     }
 
